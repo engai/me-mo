@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+$color-nav: #FFFFFF;
+$color-text: #000000;
+$color-text-secondary: #8E8E93;
+$box-shadow: rgba(0,0,0,0.1);
+$border-search: #E3E3E3;
+$color-content-header: #F9F9F9;
+$placeholder: #D8D8D8;
+$color-tabs-active: #75D6DD;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	background: $color-content-header;
+}
+
+.contents {
+	position: fixed;
+	top: 8vh;
+	height: 81vh;
+	width: 100%;
+	background: $color-content-header;
+	overflow: scroll;
+
+	&-header {
+		display: flex;
+		align-items: center;
+		height: 40px;
+		color: $color-text-secondary;
+
+		p {
+			font-size: .7em;
+			margin-bottom: 0;
+			padding-left: 2vw;
+		}
+	}
+}

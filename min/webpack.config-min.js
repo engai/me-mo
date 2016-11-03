@@ -1,0 +1,1 @@
+module.exports={entry:"./app/main.js",output:{path:"./app",filename:"bundle.js"},devServer:{inline:!0,contentBase:"./app",port:3e3},module:{loaders:[{test:/\.js$/,exclude:/node_modules/,loader:"babel"}]}};
