@@ -50,5 +50,53 @@
       "notes": "Best shrimp tacos",
       "images": ["http://stuartcollection.ucsd.edu/_images/artists/de-saint-phalle-sungod/Main_de-saint-phalle-01.jpg"]
     }
+  ],
+
+  "lists": [
+    { "name": "Bae",
+      "locations": []
+    },
+    { "name": "Summer16",
+      "locations": []
+    },
+    { "name": "SF Trip",
+      "locations": []
+    },
+    { "name": "Tacos",
+      "locations": []
+    },
+    { "name": "Vegas",
+      "locations": []
+    },
+    { "name": "Festivals",
+      "locations": []
+    },
+    { "name": "Fashion",
+      "locations": []
+    },
+    { "name": "Hiking",
+      "locations": []
+    },
+    { "name": "Art",
+      "locations": []
+    },
+    { "name": "BestFriend",
+      "locations": []
+    },
+    { "name": "Jennie",
+      "locations": []
+    },
+    { "name": "Family",
+      "locations": []
+    },
+    { "name": "Seattle",
+      "locations": []
+    },
+    { "name": "Portland",
+      "locations": []
+    },
+    { "name": "Coffee",
+      "locations": []
+    }
   ]
 }

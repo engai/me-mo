@@ -1,7 +1,7 @@
 .search {
 	position: absolute;
-	top: 8vh;
-	height: 7vh;
+	top: 9vh;
+	height: 8vh;
 	width: 100%;
 	z-index: 1000;
 	background: $color-nav;
@@ -11,17 +11,25 @@
 	box-shadow: 0px 5px 5px $box-shadow;
 
 	input {
-		width: 90vw;
-		height: 4vh;
-		border-radius: 10px;
+		width: 95vw;
+		height: 5vh;
+		border-radius: 5px;
+    border: 1px solid $border-search;
 		background: white;
-		padding-left: 20px;
+		padding-left: 25px;
 	}
+
+  img {
+    position: absolute;
+    top: 3vh;
+    left: 4vw;
+    width: 15px;
+  }
 }
 
 .contents-home {
-	height: 74vh;
-	top: 15vh;
+	height: 73vh;
+	top: 16vh;
 }
 
 .place {

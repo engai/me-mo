@@ -8,6 +8,7 @@ class Home extends Component {
     return (
       <div className="search">
   			<form action="results.html">
+          <img src="../images/search.png" />
   				<input type="search" id="search" placeholder="Search" />
   			</form>
 		  </div>
@@ -30,19 +31,6 @@ class Home extends Component {
         </div>
       </div>
     )
-
-    for(let i = 0; i < localCount; i++){
-      placeList.push
-        (<div className="place" key={i}>
-          <div className="place-holder">
-            <img src={Data.local[i].images[0]} />
-          </div>
-          <div className="place-info">
-            <h5>{Data.local[i].name}</h5>
-            <p>{Data.local[i].distance}</p>
-          </div>
-        </div>)
-    }
 
     return (
       <div className="placeList">

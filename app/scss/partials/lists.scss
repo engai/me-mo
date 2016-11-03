@@ -1,0 +1,21 @@
+.list {
+
+  &-item {
+    background: white;
+    padding: 1vh 3vw 1vh 3vw;
+    margin-bottom: 1vh;
+
+    &-text {
+      font-size: 1.3em;
+      width: 100vw;
+      display: inline-block;
+    }
+
+    &-details {
+      font-size: 0.7em;
+      width: 100vw;
+      color: $color-text-secondary;
+      display: inline-block;
+    }
+  }
+}
