@@ -1,7 +1,9 @@
+var webpack = require('webpack');
+
 module.exports = {
   entry: './app/main.js',
   output: {
-    path: './app',
+    path: '/app',
     filename: 'bundle.js'
   },
   devServer: {
@@ -32,5 +34,10 @@ module.exports = {
       { test: /\.(png|jpg|jpeg|gif|woff)$/,
         loader: 'url-loader?limit=8192' }
     ]
-  }
+  },
+  plugins: [
+   new webpack.optimize.OccurenceOrderPlugin(),
+   new webpack.HotModuleReplacementPlugin(),
+   new webpack.NoErrorsPlugin()
+ ]
 }
