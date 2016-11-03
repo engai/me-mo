@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="28px" height="38px" viewBox="0 0 19 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>lists icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Navigation/Home" transform="translate(-297.000000, -14.000000)" fill="#0C1639">
+            <g id="Navigation">
+                <g id="lists-icon" transform="translate(297.000000, 14.000000)">
+                    <g id="Group" transform="translate(0.000000, 12.000000)">
+                        <rect id="Rectangle-3-Copy-2" x="4" y="0" width="15" height="2" rx="1"></rect>
+                        <ellipse id="Oval-Copy-2" cx="1" cy="1" rx="1" ry="1"></ellipse>
+                    </g>
+                    <g id="Group-Copy" transform="translate(0.000000, 6.000000)">
+                        <rect id="Rectangle-3-Copy-2" x="4" y="0" width="15" height="2" rx="1"></rect>
+                        <ellipse id="Oval-Copy-2" cx="1" cy="1" rx="1" ry="1"></ellipse>
+                    </g>
+                    <g id="Group-Copy-2">
+                        <rect id="Rectangle-3-Copy-2" x="4" y="0" width="15" height="2" rx="1"></rect>
+                        <ellipse id="Oval-Copy-2" cx="1" cy="1" rx="1" ry="1"></ellipse>
+                    </g>
+                    <text id="lists" font-family="OpenSans, Open Sans" font-size="8" font-weight="normal" letter-spacing="-0.0857142881">
+                        <tspan x="2.4623326" y="28">lists</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
