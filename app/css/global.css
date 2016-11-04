@@ -12,7 +12,8 @@ body {
   height: 80vh;
   width: 100%;
   background: #F9F9F9;
-  overflow: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
   .contents-header {
     display: flex;
     align-items: center;
@@ -87,7 +88,7 @@ body {
       height: 15px; }
 
 .search {
-  position: absolute;
+  position: fixed;
   top: 9vh;
   height: 8vh;
   width: 100%;
@@ -116,7 +117,7 @@ body {
 
 .place-holder {
   width: 100%;
-  height: 20vh;
+  height: 25vh;
   overflow: hidden; }
   .place-holder img {
     max-width: 100%; }
@@ -132,7 +133,87 @@ body {
     font-weight: 900; }
   .place-info p {
     font-size: .7em;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    margin-top: 0; }
+
+.Login {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: #F9F9F9; }
+  .Login-image {
+    width: 100vw;
+    height: 30vh;
+    background: white url(../images/login.png) no-repeat left bottom;
+    background-size: 100% 80px; }
+  .Login-contents {
+    text-align: center;
+    margin: 0 auto; }
+    .Login-contents-buttons {
+      font-size: 1.3em; }
+      .Login-contents-buttons-login {
+        width: 70vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        background-color: #75D6DD;
+        border: 3px solid #71CDD4;
+        border-radius: 10px;
+        margin: 0 auto;
+        margin-bottom: 2vh;
+        margin-top: 3vh;
+        color: white; }
+      .Login-contents-buttons-signup {
+        width: 70vw;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        border: 3px solid #75D6DD;
+        border-radius: 10px;
+        margin: 0 auto;
+        color: #75D6DD; }
+      .Login-contents-buttons a {
+        text-decoration: none; }
+  .Login input {
+    width: 70vw;
+    height: 5vh;
+    margin-bottom: 2vh; }
+
+.Add input {
+  background: white;
+  width: 100vw;
+  padding-left: 2vw;
+  vertical-align: top; }
+.Add #location {
+  height: 5vh; }
+.Add #images {
+  width: 200vw;
+  height: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+  .Add #images img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px; }
+.Add #notes {
+  height: 15vh; }
+.Add #info {
+  height: 10vh; }
+.Add .map img {
+  width: 100vw; }
+.Add a {
+  text-decoration: none; }
+.Add .add-button {
+  text-align: center;
+  width: 85vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #75D6DD;
+  border: 3px solid #71CDD4;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  color: white; }
 
 .list-item {
   background: white;

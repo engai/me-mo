@@ -8,13 +8,15 @@ import Tabs from './components/tabs';
 import Home from './components/home';
 import Add from './components/add';
 import Lists from './components/lists';
+import Login from './components/login';
 
 class Memo extends Component {
   render () {
     return (
       <Router history={hashHistory}>
         <Route path='/' component={Container}>
-          <IndexRoute component={Home} />
+          <IndexRoute component={Login} />
+          <Route path='/home' component={Home} />
           <Route path='/add' component={Add} />
           <Route path='/lists' component={Lists} />
         </Route>

@@ -10,7 +10,7 @@ const Tabs = () => (
             <div className="tabs-color"></div>
 				</div>
       </IndexLink>
-      <IndexLink activeClassName='tabs-active' to='/'>
+      <IndexLink activeClassName='tabs-active' to='/home'>
         <div className="tabs__buttons-set">
 					<img src="./images/home.svg" />
           <div className="tabs-color"></div>

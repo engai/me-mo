@@ -1,0 +1,61 @@
+.Add {
+
+  .contents-header {
+
+  }
+
+  input {
+    background: white;
+    width: 100vw;
+    padding-left: 2vw;
+    vertical-align: top;
+  }
+
+  #location {
+    height: 5vh;
+  }
+
+  #images {
+    width: 200vw;
+    height: 100px;
+    img {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+    }
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  #notes {
+    height: 15vh;
+  }
+
+  #info {
+    height: 10vh;
+  }
+
+  .map {
+    img {
+      width: 100vw;
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .add-button {
+    text-align: center;
+    width: 85vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: $blue;
+    border: 3px solid $blue-border;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 4vh;
+    margin-top: 3vh;
+    color: white;
+  }
+}

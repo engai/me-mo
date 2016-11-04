@@ -8,6 +8,8 @@ $border-search: #E3E3E3;
 $color-content-header: #F9F9F9;
 $placeholder: #D8D8D8;
 $color-tabs-active: #75D6DD;
+$blue: #75D6DD;
+$blue-border: #71CDD4;
 
 body {
 	margin: 0;
@@ -23,7 +25,8 @@ body {
 	height: 80vh;
 	width: 100%;
 	background: $color-content-header;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 
 	&-header {
 		display: flex;
