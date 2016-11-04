@@ -7,8 +7,10 @@ class Home extends Component {
   renderSearch() {
     return (
         <div className="search">
+          <form action="#/results">
             <img src="../images/search.png" />
     				<input type="search" id="search" placeholder="Search" />
+          </form>
   		  </div>
     );
   }
