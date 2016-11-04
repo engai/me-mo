@@ -5,7 +5,7 @@ const Nav = () => (
     <div className="navigation">
   		<div className="navigation-content">
   			<div className="navigation-content-holder"></div>
-  			<h3>Me-mo</h3>
+  			<h3>me-mo</h3>
   			<div className="navigation-content-holder"></div>
   		</div>
   	</div>

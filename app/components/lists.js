@@ -10,6 +10,7 @@ class Lists extends Component {
     let listCount = Data.lists.length;
 
     let listArray = lists.map((list) =>
+      <Link to="/results" key={list.name} >
       <div className="list-item" key={list.name}>
         <div className="list-item-text">
           # {list.name}
@@ -18,6 +19,7 @@ class Lists extends Component {
           {list.locations.length} items • 3 not visited
         </div>
       </div>
+    </Link>
     )
 
     return (

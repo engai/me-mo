@@ -1,0 +1,41 @@
+.results {
+
+	a:-webkit-any-link {
+    color: black;
+    text-decoration: none;
+    cursor: auto;
+	}
+
+	&-place {
+		height: 20vh;
+		display: flex;
+		justify-content: space-between;
+		background: white;
+		margin-bottom: 2vh;
+	}
+
+	&-holder {
+		img {
+			width: 20vh;
+			height: 20vh;
+		}
+	}
+
+	&-info {
+		text-decoration: none;
+		width: 50vw;
+		background: white;
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+#results-back {
+	z-index: 1000;
+	height: 30px;
+	position: fixed;
+	top: 15px;
+	left: 20px;
+}

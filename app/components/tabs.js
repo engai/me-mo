@@ -6,19 +6,19 @@ const Tabs = () => (
     <div className="tabs__buttons">
       <IndexLink activeClassName='tabs-active' to='/add'>
         <div className="tabs__buttons-set">
-					  <img src="./images/add.svg" />
+					  <img id="icon-add" src="./images/add.png" />
             <div className="tabs-color"></div>
 				</div>
       </IndexLink>
       <IndexLink activeClassName='tabs-active' to='/home'>
         <div className="tabs__buttons-set">
-					<img src="./images/home.svg" />
+					<img id="icon-home" src="./images/home.png" />
           <div className="tabs-color"></div>
 				</div>
       </IndexLink>
       <IndexLink activeClassName='tabs-active' to='/lists'>
         <div className="tabs__buttons-set">
-					<img src="./images/lists.svg" />
+					<img id="icon-lists" src="./images/lists.png" />
           <div className="tabs-color"></div>
 				</div>
       </IndexLink>

@@ -6,6 +6,15 @@ body {
   font-size: 16px;
   background: #F9F9F9; }
 
+input {
+  outline: none;
+  border: none; }
+
+a:-webkit-any-link, a {
+  color: black;
+  text-decoration: none;
+  cursor: auto; }
+
 .contents {
   position: fixed;
   top: 9vh;
@@ -42,7 +51,7 @@ body {
   .tabs-active .tabs-color {
     background: #75D6DD; }
   .tabs-color {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 33vw;
     height: 7px; }
@@ -62,14 +71,25 @@ body {
   margin-right: 2vh;
   border-bottom: 1px solid #E3E3E3; }
 
+#icon-add {
+  width: 30px;
+  height: 42px; }
+
+#icon-home {
+  width: 30px;
+  height: 42px; }
+
+#icon-lists {
+  width: 28px;
+  height: 38px; }
+
 .navigation {
   position: fixed;
   height: 9vh;
   width: 100%;
-  background: white url(../images/nav.png);
-  background-size: cover;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000; }
+  z-index: 1000;
+  background: white; }
   .navigation-content {
     height: 100%;
     width: 90vw;
@@ -183,7 +203,7 @@ body {
   width: 100vw;
   padding-left: 2vw;
   vertical-align: top; }
-.Add #location {
+.Add #location, .Add #tags {
   height: 5vh; }
 .Add #images {
   width: 200vw;
@@ -215,10 +235,15 @@ body {
   margin-top: 3vh;
   color: white; }
 
+.list a {
+  text-decoration: none; }
 .list-item {
   background: white;
   padding: 1vh 3vw 1vh 3vw;
   margin-bottom: 1vh; }
+  .list-item a {
+    text-decoration: none;
+    color: black; }
   .list-item-text {
     font-size: 1.3em;
     width: 100vw;
@@ -228,5 +253,77 @@ body {
     width: 100vw;
     color: #8E8E93;
     display: inline-block; }
+
+.results a:-webkit-any-link {
+  color: black;
+  text-decoration: none;
+  cursor: auto; }
+.results-place {
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  margin-bottom: 2vh; }
+.results-holder img {
+  width: 20vh;
+  height: 20vh; }
+.results-info {
+  text-decoration: none;
+  width: 50vw;
+  background: white; }
+  .results-info a {
+    text-decoration: none;
+    color: black; }
+
+#results-back {
+  z-index: 1000;
+  height: 30px;
+  position: fixed;
+  top: 15px;
+  left: 20px; }
+
+.Location input {
+  background: white;
+  width: 100vw;
+  padding-left: 2vw;
+  vertical-align: top; }
+.Location #location, .Location #tags {
+  height: 5vh; }
+.Location #images {
+  width: 200vw;
+  height: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+  .Location #images img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px; }
+.Location #notes {
+  height: 15vh; }
+.Location #info {
+  height: 10vh; }
+.Location .map img {
+  width: 100vw; }
+.Location a {
+  text-decoration: none; }
+.Location .add-button {
+  text-align: center;
+  width: 85vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #75D6DD;
+  border: 3px solid #71CDD4;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  color: white; }
+
+#location-back {
+  z-index: 1000;
+  height: 30px;
+  position: fixed;
+  top: 15px;
+  left: 20px; }
 
 /*# sourceMappingURL=global.css.map */

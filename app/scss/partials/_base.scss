@@ -19,6 +19,17 @@ body {
 	background: $color-content-header;
 }
 
+input {
+	outline: none;
+	border: none;
+}
+
+a:-webkit-any-link, a {
+    color: black;
+    text-decoration: none;
+    cursor: auto;
+}
+
 .contents {
 	position: fixed;
 	top: 9vh;

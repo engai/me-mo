@@ -2,11 +2,23 @@ import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 var Data = require('../data/data.json');
 
-class Add extends Component {
+class Location extends Component {
 
   constructor(props, context) {
     super(props);
     this.context = context;
+    this.props = props;
+
+    let name = this.props.location.query.location;
+    let currentData = null;
+
+    for(let i = 0; i < Data.local.length; i++){
+      if(name === Data.local[i].name){
+        currentData = Data.local[i];
+        break;
+        console.log(i);
+      }
+    }
 
     this.state = {
       location: "",
@@ -76,7 +88,7 @@ class Add extends Component {
   			<div className="contents-header">
   				<p>LOCATION NAME</p>
   			</div>
-        <input type="location" id="location" placeholder="ex: Cool Taco Place, Nice Bar" onChange={this.handleLocationInput.bind(this)}/>
+        <input type="location" id="location" value={this.props.location.query.location} onChange={this.handleLocationInput.bind(this)}/>
         <div className="contents-header">
   				<p>IMAGES</p>
   			</div>
@@ -104,19 +116,29 @@ class Add extends Component {
         <div className="map">
           <img src="../images/map.png" />
         </div>
-        <Link to="/home">
-          <div className="add-button">
-            <span>Add</span>
-          </div>
-        </Link>
 		  </div>
     );
   }
 
-
   render () {
+
+    console.log(this.props.location.query.originPage);
+
+    let origin;
+    if(this.props.location.query.originPage === "home"){
+      origin = "/home";
+    }
+    else{
+      origin = "/results";
+    }
+
+    console.log(origin);
+
     return (
-      <div className="Add">
+      <div className="Location">
+        <Link to={origin}>
+          <img id="location-back" src="../images/back.png" />
+        </Link>
         {this.renderContents()}
       </div>
     )
@@ -124,4 +146,4 @@ class Add extends Component {
 }
 
 
-export default Add
+export default Location

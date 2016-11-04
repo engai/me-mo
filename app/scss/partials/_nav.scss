@@ -2,10 +2,9 @@
 	position: fixed;
 	height: 9vh;
 	width: 100%;
-	background: white url(../images/nav.png);
-  background-size: cover;
 	box-shadow: 0px 5px 5px $box-shadow;
 	z-index: 1000;
+	background: white;
 
 	&-content {
 		height: 100%;

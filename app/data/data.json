@@ -21,6 +21,16 @@
       "images": ["https://brewnetteblog.files.wordpress.com/2015/05/img_2558.jpg"]
     },
     {
+      "name": "Cool Taco Place",
+      "address":"123 Salsa Lane",
+      "distance": 0.5,
+      "category": "Mexican, Eateries",
+      "hours": "M-F 11:00AM - 10:00PM",
+      "tags": ["food", "sf2016"],
+      "notes": "Went on a nice date",
+      "images": ["http://www.91x.com/wp-content/uploads/2016/02/taco-recipe.jpg"]
+    },
+    {
       "name": "Regents Pizza",
       "address":"9500 Gilman Dr.",
       "distance": 0.4,
@@ -54,49 +64,49 @@
 
   "lists": [
     { "name": "Bae",
-      "locations": []
-    },
-    { "name": "Summer16",
-      "locations": []
-    },
-    { "name": "SF Trip",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Tacos",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+    },
+    { "name": "Summer16",
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+    },
+    { "name": "SF Trip",
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Vegas",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Festivals",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Fashion",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Hiking",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Art",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "BestFriend",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Jennie",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Family",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Seattle",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Portland",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "Coffee",
-      "locations": []
+      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     }
   ]
 }

@@ -1,4 +1,4 @@
-.Add {
+.Location {
 
   .contents-header {
 
@@ -58,4 +58,13 @@
     margin-top: 3vh;
     color: white;
   }
+}
+
+
+#location-back {
+	z-index: 1000;
+	height: 30px;
+	position: fixed;
+	top: 15px;
+	left: 20px;
 }

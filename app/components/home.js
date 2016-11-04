@@ -6,12 +6,10 @@ class Home extends Component {
 
   renderSearch() {
     return (
-      <div className="search">
-  			<form action="results.html">
-          <img src="../images/search.png" />
-  				<input type="search" id="search" placeholder="Search" />
-  			</form>
-		  </div>
+        <div className="search">
+            <img src="../images/search.png" />
+    				<input type="search" id="search" placeholder="Search" />
+  		  </div>
     );
   }
 
@@ -19,8 +17,11 @@ class Home extends Component {
     let local = Data.local;
     let localCount = Data.local.length;
 
-
     let placeList = local.map((place) =>
+    <Link to={{
+        pathname: '/location',
+        query: { location: place.name, originPage: "home" }
+  }} key={place.name}>
       <div className="place" key={place.name}>
         <div className="place-holder">
           <img src={place.images[0]} />
@@ -30,6 +31,7 @@ class Home extends Component {
           <p>{place.distance}</p>
         </div>
       </div>
+    </Link>
     )
 
     return (

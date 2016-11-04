@@ -27,7 +27,7 @@
   }
 
   &-color {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     width: 33vw;
     height: 7px;
@@ -51,4 +51,20 @@
 	margin-left: 2vh;
 	margin-right: 2vh;
 	border-bottom: 1px solid $border-search;
+}
+
+#icon-add {
+	width: 30px;
+	height: 42px;
+}
+
+
+#icon-home {
+	width: 30px;
+	height: 42px;
+}
+
+#icon-lists {
+	width: 28px;
+	height: 38px;
 }

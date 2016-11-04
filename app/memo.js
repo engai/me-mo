@@ -9,6 +9,8 @@ import Home from './components/home';
 import Add from './components/add';
 import Lists from './components/lists';
 import Login from './components/login';
+import Results from './components/results';
+import Location from './components/location';
 
 class Memo extends Component {
   render () {
@@ -19,6 +21,8 @@ class Memo extends Component {
           <Route path='/home' component={Home} />
           <Route path='/add' component={Add} />
           <Route path='/lists' component={Lists} />
+          <Route path='/results' component={Results} />
+          <Route path='/location' component={Location} />
         </Route>
       </Router>
     )

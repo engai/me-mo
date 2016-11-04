@@ -1,9 +1,17 @@
 .list {
+  a {
+    text-decoration: none;
+  }
 
   &-item {
     background: white;
     padding: 1vh 3vw 1vh 3vw;
     margin-bottom: 1vh;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
     &-text {
       font-size: 1.3em;
