@@ -29,10 +29,19 @@ class Results extends Component {
         }
       }
 
+      let origin;
+      console.log(this.props.location.query.originPage);
+      if(this.props.location.query.originPage === "home"){
+        origin = "search";
+      }
+      else{
+        origin = "results";
+      }
+
       return(
       <Link to={{
           pathname: '/location',
-          query: { location: place.name , originPage: "results", listClicked: listClicked }
+          query: { location: place.name , originPage: origin, listClicked: listClicked }
     }} key={place.name}>
         <div className="results-place" key={place.name}>
           <div className="results-holder">
@@ -40,7 +49,7 @@ class Results extends Component {
           </div>
           <div className="results-info">
             <h5>{place.name}</h5>
-            <p>{place.distance}</p>
+            <p>{place.distance} mi.</p>
           </div>
         </div>
       </Link>
@@ -56,11 +65,18 @@ class Results extends Component {
   }
 
   renderContents() {
+    let header = "";
+    if(this.props.location.query.originPage === "home"){
+      header = "Search Results";
+    }
+    else {
+      header = this.props.location.query.list
+    }
 
     return (
       <div className="contents">
   			<div className="contents-header">
-  				<p>{this.props.location.query.list}</p>
+  				<p>{header}</p>
   			</div>
   			{this.renderPlace()}
 		  </div>
@@ -68,9 +84,19 @@ class Results extends Component {
   }
 
   render () {
+
+    let origin;
+    console.log(this.props.location.query.originPage);
+    if(this.props.location.query.originPage === "home"){
+      origin = "/home";
+    }
+    else{
+      origin = "/lists";
+    }
+
     return (
       <div className="Results">
-        <Link to="/lists">
+        <Link to={origin}>
           <img id="results-back" src="../images/back.png" />
         </Link>
         {this.renderContents()}

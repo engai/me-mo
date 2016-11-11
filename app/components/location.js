@@ -113,7 +113,7 @@ class Location extends Component {
         <div className="contents-header">
   				<p>TAGS</p>
   			</div>
-        <input type="tags" id="tags" value={"#" +place.tags} onChange={this.handleTagsInput.bind(this)}/>
+        <input type="tags" id="tags" value={place.tags} onChange={this.handleTagsInput.bind(this)}/>
         <div className="contents-header">
   				<p>NOTES</p>
   			</div>
@@ -137,6 +137,15 @@ class Location extends Component {
     let origin;
     if(this.props.location.query.originPage === "home"){
       origin = "/home";
+    }
+    else if(this.props.location.query.originPage === "search") {
+        origin = {
+          pathname: "/results",
+          query : {
+            list: this.props.location.query.listClicked,
+            originPage: "home"
+          }
+        }
     }
     else{
       origin = {

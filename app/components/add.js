@@ -17,25 +17,21 @@ class Add extends Component {
   }
 
   handleLocationInput(event) {
-    console.log(event.target.value);
     this.setState({
       location: event.target.value
     });
   }
   handleTagsInput(event) {
-    console.log(event.target.value);
     this.setState({
       tags: event.target.value
     });
   }
   handleNotesInput(event) {
-    console.log(event.target.value);
     this.setState({
       notes: event.target.value
     });
   }
   handleInfoInput(event) {
-    console.log(event.target.value);
     this.setState({
       info: event.target.value
     });

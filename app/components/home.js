@@ -14,7 +14,7 @@ class Home extends Component {
   renderSearch() {
     return (
         <div className="search">
-          <form action="#/results">
+          <form action="#/results?list=%23Summer16&originPage=home">
             <img src="../images/search.png" />
     				<input type="search" id="search" placeholder="Search" />
           </form>
@@ -67,7 +67,6 @@ class Home extends Component {
     let Data = this.context.Data;
     let addingJSON = this.props.location.query;
     if (addingJSON.shouldAdd){
-      console.log("I'm Adding Twice yo");
       Data.local.push({
         "name": addingJSON.name,
         "address": addingJSON.address,
@@ -86,13 +85,11 @@ class Home extends Component {
         if(addingJSON.tags === Data.lists[i].name){
           Data.lists[i].locations.unshift(addingJSON.name);
           exists = true;
-          console.log("Exists");
           break;
         }
       }
 
       if(!exists) {
-        console.log("Does not exist");
         Data.lists.push({
           "name": addingJSON.tags,
           "locations": [addingJSON.name]
