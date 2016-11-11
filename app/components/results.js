@@ -4,15 +4,35 @@ var Data = require('../data/data.json');
 
 class Results extends Component {
 
+  constructor(props, context) {
+    super(props);
+    this.context = context;
+    this.props = props;
+  }
+
   renderPlace() {
-    let local = Data.local;
-    let localCount = Data.local.length;
+    let listClicked = this.props.location.query.list;
+    let locations = [];
 
+    for(let i in Data.lists){
+      if(Data.lists[i].name === listClicked){
+        locations = Data.lists[i].locations;
+      }
+    }
 
-    let placeList = local.map((place) =>
+    let placeList = locations.map((name) => {
+
+      let place = {};
+      for (let i in Data.local) {
+        if(Data.local[i].name === name){
+          place = Data.local[i];
+        }
+      }
+
+      return(
       <Link to={{
           pathname: '/location',
-          query: { location: place.name , originPage: "results"  }
+          query: { location: place.name , originPage: "results", listClicked: listClicked }
     }} key={place.name}>
         <div className="results-place" key={place.name}>
           <div className="results-holder">
@@ -24,6 +44,8 @@ class Results extends Component {
           </div>
         </div>
       </Link>
+    );
+  }
     )
 
     return (
@@ -38,7 +60,7 @@ class Results extends Component {
     return (
       <div className="contents">
   			<div className="contents-header">
-  				<p>RESULTS</p>
+  				<p>{this.props.location.query.list}</p>
   			</div>
   			{this.renderPlace()}
 		  </div>
@@ -56,5 +78,9 @@ class Results extends Component {
     )
   }
 }
+
+Results.contextTypes = {
+  Data: React.PropTypes.object
+};
 
 export default Results

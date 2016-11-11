@@ -6,7 +6,7 @@
       "distance": 0.2,
       "category": "Mexican, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Best shrimp tacos",
       "images": ["http://www.hours.info/wp-content/uploads/2013/06/vallarta-sd-1.jpg"]
     },
@@ -16,7 +16,7 @@
       "distance": 0.3,
       "category": "Breweries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Best shrimp tacos",
       "images": ["https://brewnetteblog.files.wordpress.com/2015/05/img_2558.jpg"]
     },
@@ -26,7 +26,7 @@
       "distance": 0.5,
       "category": "Mexican, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Went on a nice date",
       "images": ["http://www.91x.com/wp-content/uploads/2016/02/taco-recipe.jpg"]
     },
@@ -36,7 +36,7 @@
       "distance": 0.4,
       "category": "Pizza",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Best shrimp tacos",
       "images": ["https://s3-media3.fl.yelpcdn.com/bphoto/ITCH_52stWPnsJfUEiQZCQ/o.jpg"]
     },
@@ -46,7 +46,7 @@
       "distance": 0.5,
       "category": "Japanese, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Best shrimp tacos",
       "images": ["https://delighted.files.wordpress.com/2010/06/img_56652.jpg"]
     },
@@ -56,57 +56,21 @@
       "distance": 0.6,
       "category": "Monument",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#food", "#sf2016"],
       "notes": "Best shrimp tacos",
       "images": ["http://stuartcollection.ucsd.edu/_images/artists/de-saint-phalle-sungod/Main_de-saint-phalle-01.jpg"]
     }
   ],
 
   "lists": [
-    { "name": "Bae",
+    { "name": "#Bae",
       "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
-    { "name": "Tacos",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+    { "name": "#Tacos",
+      "locations": ["Cool Taco Place"]
     },
-    { "name": "Summer16",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "SF Trip",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Vegas",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Festivals",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Fashion",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Hiking",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Art",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "BestFriend",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Jennie",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Family",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Seattle",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Portland",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
-    },
-    { "name": "Coffee",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+    { "name": "#Summer16",
+      "locations": ["Vallartas Express", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     }
   ]
 }

@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
-var Data = require('../data/data.json');
-
 class Lists extends Component {
 
+  constructor(props, context) {
+    super(props);
+    this.context = context;
+    this.props = props;
+  }
+
   renderContents() {
+    let Data = this.context.Data;
     let lists = Data.lists;
     let listCount = Data.lists.length;
 
     let listArray = lists.map((list) =>
-      <Link to="/results" key={list.name} >
+      <Link to={{
+            pathname: '/results',
+            query: { list: list.name }
+      }} key={list.name}>
       <div className="list-item" key={list.name}>
         <div className="list-item-text">
-          # {list.name}
+          {list.name}
         </div>
         <div className="list-item-details">
           {list.locations.length} items • 3 not visited
@@ -42,5 +50,9 @@ class Lists extends Component {
     )
   }
 }
+
+Lists.contextTypes = {
+  Data: React.PropTypes.object
+};
 
 export default Lists

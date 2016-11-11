@@ -40,35 +40,6 @@ class Add extends Component {
       info: event.target.value
     });
   }
-  handleDataUpdate(event) {
-
-    event.preventDefault();
-    console.log("hi1");
-    let exists = false;
-
-    Data.local.push({
-      "name": this.state.location,
-      "address": this.state.info,
-      "tags": [this.state.tags],
-      "notes": this.state.notes
-    });
-
-    console.log("hi2");
-    for(var i = 0; i < Data.lists.length; i++){
-      if(Data.lists[i].name === this.state.tags){
-        Data.lists[i].locations.unshift(this.state.location);
-        exists = true;
-      }
-    }
-    console.log("hi3");
-
-    if(!exists) {
-      Data.lists.push({
-        "name": this.state.tags,
-        "locations": [this.state.location]
-      })
-    }
-  }
 
   renderContents() {
     return (
@@ -104,7 +75,16 @@ class Add extends Component {
         <div className="map">
           <img src="../images/map.png" />
         </div>
-        <Link to="/home">
+        <Link to={{
+              pathname: '/home',
+              query: {
+                shouldAdd: true,
+                name: this.state.location,
+                address: this.state.info,
+                tags: [this.state.tags],
+                notes: this.state.notes
+              }
+        }}>
           <div className="add-button">
             <span>Add</span>
           </div>

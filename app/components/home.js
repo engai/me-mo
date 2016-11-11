@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
-var Data = require('../data/data.json');
 
 class Home extends Component {
+
+  constructor(props, context) {
+    super(props);
+    this.context = context;
+    this.props = props;
+
+    let Data = this.context.Data;
+  }
 
   renderSearch() {
     return (
@@ -16,6 +23,7 @@ class Home extends Component {
   }
 
   renderPlace() {
+    let Data = this.context.Data;
     let local = Data.local;
     let localCount = Data.local.length;
 
@@ -30,7 +38,7 @@ class Home extends Component {
         </div>
         <div className="place-info">
           <h5>{place.name}</h5>
-          <p>{place.distance}</p>
+          <p>{place.distance} mi.</p>
         </div>
       </div>
     </Link>
@@ -55,7 +63,46 @@ class Home extends Component {
     );
   }
 
+  componentDidMount () {
+    let Data = this.context.Data;
+    let addingJSON = this.props.location.query;
+    if (addingJSON.shouldAdd){
+      console.log("I'm Adding Twice yo");
+      Data.local.push({
+        "name": addingJSON.name,
+        "address": addingJSON.address,
+        "distance": 0.8,
+        "category": "",
+        "tags": [addingJSON.tags],
+        "hours": "M-F 11:00AM - 10:00PM",
+        "notes": addingJSON.notes,
+        "images": ["http://www.titanui.com/wp-content/uploads/2015/04/22/Flat-Gradient-Geometric-Background-Vector.jpg"]
+      });
+
+      this.props.location.query.shouldAdd = false;
+      let exists = false;
+
+      for(let i in Data.lists){
+        if(addingJSON.tags === Data.lists[i].name){
+          Data.lists[i].locations.unshift(addingJSON.name);
+          exists = true;
+          console.log("Exists");
+          break;
+        }
+      }
+
+      if(!exists) {
+        console.log("Does not exist");
+        Data.lists.push({
+          "name": addingJSON.tags,
+          "locations": [addingJSON.name]
+        })
+      }
+    }
+  }
+
   render () {
+
     return (
       <div className="Home">
         {this.renderSearch()}
@@ -64,5 +111,9 @@ class Home extends Component {
     )
   }
 }
+
+Home.contextTypes = {
+  Data: React.PropTypes.object
+};
 
 export default Home

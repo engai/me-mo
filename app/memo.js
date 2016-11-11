@@ -11,8 +11,13 @@ import Lists from './components/lists';
 import Login from './components/login';
 import Results from './components/results';
 import Location from './components/location';
+var Data = require('./data/data.json');
 
 class Memo extends Component {
+  getChildContext() {
+    return {Data: Data};
+  }
+
   render () {
     return (
       <Router history={hashHistory}>
@@ -34,5 +39,9 @@ const Container = (props) => <div>
   <Nav />
   {props.children}
 </div>
+
+Memo.childContextTypes = {
+  Data: React.PropTypes.object
+};
 
 export default Memo

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
-var Data = require('../data/data.json');
 
 class Location extends Component {
 
@@ -8,6 +7,8 @@ class Location extends Component {
     super(props);
     this.context = context;
     this.props = props;
+
+    let Data = this.context.Data;
 
     let name = this.props.location.query.location;
     let currentData = null;
@@ -53,7 +54,7 @@ class Location extends Component {
     });
   }
   handleDataUpdate(event) {
-
+    let Data = this.context.Data;
     event.preventDefault();
     console.log("hi1");
     let exists = false;
@@ -83,12 +84,23 @@ class Location extends Component {
   }
 
   renderContents() {
+    let Data = this.context.Data;
+    let name = this.props.location.query.location;
+    let place;
+
+    for(let i in Data.local){
+      if(Data.local[i].name === name ){
+        place = Data.local[i];
+        break;
+      }
+    }
+
     return (
       <div className="contents">
   			<div className="contents-header">
   				<p>LOCATION NAME</p>
   			</div>
-        <input type="location" id="location" value={this.props.location.query.location} onChange={this.handleLocationInput.bind(this)}/>
+        <input type="location" id="location" value={place.name} onChange={this.handleLocationInput.bind(this)}/>
         <div className="contents-header">
   				<p>IMAGES</p>
   			</div>
@@ -101,15 +113,15 @@ class Location extends Component {
         <div className="contents-header">
   				<p>TAGS</p>
   			</div>
-        <input type="tags" id="tags" placeholder="ex: #Family #Summer16 #Food" onChange={this.handleTagsInput.bind(this)}/>
+        <input type="tags" id="tags" value={"#" +place.tags} onChange={this.handleTagsInput.bind(this)}/>
         <div className="contents-header">
   				<p>NOTES</p>
   			</div>
-        <input type="notes" id="notes" placeholder="Enter Notes" onChange={this.handleNotesInput.bind(this)}/>
+        <input type="notes" id="notes" value={place.notes} onChange={this.handleNotesInput.bind(this)}/>
         <div className="contents-header">
   				<p>INFO</p>
   			</div>
-        <input type="info" id="info" placeholder={"9500 Gilman Drive"} onChange={this.handleInfoInput.bind(this)}/>
+        <input type="info" id="info" value={place.address} onChange={this.handleInfoInput.bind(this)}/>
         <div className="contents-header">
   				<p>MAP</p>
   			</div>
@@ -122,17 +134,18 @@ class Location extends Component {
 
   render () {
 
-    console.log(this.props.location.query.originPage);
-
     let origin;
     if(this.props.location.query.originPage === "home"){
       origin = "/home";
     }
     else{
-      origin = "/results";
+      origin = {
+        pathname: "/results",
+        query : {
+          list: this.props.location.query.listClicked
+        }
+      }
     }
-
-    console.log(origin);
 
     return (
       <div className="Location">
@@ -145,5 +158,8 @@ class Location extends Component {
   }
 }
 
+Location.contextTypes = {
+  Data: React.PropTypes.object
+};
 
 export default Location
