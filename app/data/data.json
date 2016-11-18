@@ -2,22 +2,22 @@
   "local": [
     {
       "name": "Vallartas Express",
-      "address":"9500 Gilman Dr.",
+      "address":"4277 Genesee Ave.",
       "distance": 0.2,
       "category": "Mexican, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["#food", "#sf2016"],
-      "notes": "Best shrimp tacos",
+      "tags": ["#Bae", "#Summer16"],
+      "notes": "Christian Fries with Bae are the best!",
       "images": ["../images/vallartas.png"]
     },
     {
       "name": "Karl Strauss Brewery",
-      "address":"9500 Gilman Dr.",
+      "address":"1044 Wall St.",
       "distance": 0.3,
       "category": "Breweries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["#food", "#sf2016"],
-      "notes": "Best shrimp tacos",
+      "tags": ["#Bae", "#Summer16"],
+      "notes": "Get the Mac and Cheese!",
       "images": ["../images/brewery.png"]
     },
     {
@@ -26,27 +26,27 @@
       "distance": 0.5,
       "category": "Mexican, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["#food", "#sf2016"],
-      "notes": "Went on a nice date",
+      "tags": ["#Bae", "#Summer16"],
+      "notes": "Best Tacos Ever!",
       "images": ["../images/tacos.png"]
     },
     {
       "name": "Regents Pizza",
-      "address":"9500 Gilman Dr.",
+      "address":"4150 Regents Park Row",
       "distance": 0.4,
       "category": "Pizza",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["#food", "#sf2016"],
+      "tags": ["#Bae", "#Summer16"],
       "notes": "Best shrimp tacos",
       "images": ["../images/pizza.png"]
     },
     {
       "name": "Sushi Ota",
-      "address":"9500 Gilman Dr.",
+      "address":"4529 Mission Bay Dr.",
       "distance": 0.5,
       "category": "Japanese, Eateries",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["food", "sf2016"],
+      "tags": ["#Bae", "#Summer16"],
       "notes": "Best shrimp tacos",
       "images": ["../images/sushi.png"]
     },
@@ -56,7 +56,7 @@
       "distance": 0.6,
       "category": "Monument",
       "hours": "M-F 11:00AM - 10:00PM",
-      "tags": ["#food", "#sf2016"],
+      "tags": ["#Bae"],
       "notes": "Best shrimp tacos",
       "images": ["../images/sungod.png"]
     }
