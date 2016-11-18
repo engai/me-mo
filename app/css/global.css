@@ -217,30 +217,13 @@ a:-webkit-any-link, a {
   100% {
     opacity: 0;
     top: 100vh; } }
-.Add .add-header {
-  color: black;
-  font-size: 12px; }
-.Add .add-placeholder img {
-  width: 100vw; }
 .Add input {
   background: white;
   width: 100vw;
   padding-left: 2vw;
-  color: #565963;
-  font-size: 14px; }
-.Add ::-webkit-input-placeholder {
-  font-size: 14px; }
-.Add :-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 14px; }
-.Add ::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 14px; }
-.Add :-ms-input-placeholder {
-  font-size: 14px; }
+  vertical-align: top; }
 .Add #location, .Add #tags {
-  height: 5vh;
-  background: white; }
+  height: 5vh; }
 .Add #images {
   width: 200vw;
   height: 100px;
@@ -251,17 +234,11 @@ a:-webkit-any-link, a {
     height: 100px;
     margin-right: 10px; }
 .Add #notes {
-  height: 15vh;
-  width: 100%;
-  background: white; }
+  height: 15vh; }
 .Add #info {
-  height: 10vh;
-  background: white; }
+  height: 10vh; }
 .Add .map img {
   width: 100vw; }
-.Add #map {
-  width: 100vw;
-  height: 30vh; }
 .Add a {
   text-decoration: none; }
 .Add .add-button {
@@ -276,7 +253,67 @@ a:-webkit-any-link, a {
   margin-bottom: 4vh;
   margin-top: 3vh;
   color: white; }
-.Add #add-button {
+
+.Add2 .add-header {
+  color: black;
+  font-size: 12px; }
+.Add2 .add-placeholder img {
+  width: 100vw; }
+.Add2 input {
+  background: white;
+  width: 100vw;
+  padding-left: 2vw;
+  color: #565963;
+  font-size: 14px; }
+.Add2 ::-webkit-input-placeholder {
+  font-size: 14px; }
+.Add2 :-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px; }
+.Add2 ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px; }
+.Add2 :-ms-input-placeholder {
+  font-size: 14px; }
+.Add2 #location, .Add2 #tags {
+  height: 5vh;
+  background: white; }
+.Add2 #images {
+  width: 200vw;
+  height: 100px;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+  .Add2 #images img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px; }
+.Add2 #notes {
+  height: 15vh;
+  width: 100%;
+  background: white; }
+.Add2 #info {
+  height: 10vh;
+  background: white; }
+.Add2 .map img {
+  width: 100vw; }
+.Add2 #map {
+  width: 100vw;
+  height: 30vh; }
+.Add2 a {
+  text-decoration: none; }
+.Add2 .add-button {
+  text-align: center;
+  width: 85vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #75D6DD;
+  border: 3px solid #71CDD4;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  color: white; }
+.Add2 #add-button {
   z-index: 1000;
   height: 30px;
   width: 30px;

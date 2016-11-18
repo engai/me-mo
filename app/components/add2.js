@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 var Data = require('../data/data.json');
 
-class Add extends Component {
+class Add2 extends Component {
 
   constructor(props, context) {
     super(props);
@@ -40,11 +40,15 @@ class Add extends Component {
   renderContents() {
     return (
       <div className="contents">
-  			<div className="contents-header">
+        <div className="add-placeholder">
+          <img src="../images/add-place.png" />
+        </div>
+  			<div className="contents-header add-header">
   				<p>LOCATION NAME</p>
   			</div>
         <input type="location" id="location" placeholder="ex: Cool Taco Place, Nice Bar" onChange={this.handleLocationInput.bind(this)}/>
-        <div className="contents-header">
+        {/*
+        <div className="contents-header add-header">
   				<p>IMAGES</p>
   			</div>
         <div id="images">
@@ -52,25 +56,30 @@ class Add extends Component {
           <img src="../images/placeholder.png" />
           <img src="../images/placeholder.png" />
           <img src="../images/placeholder.png" />
-        </div>
-        <div className="contents-header">
-  				<p>TAGS</p>
+        </div> */}
+        <div className="contents-header add-header">
+  				<p>TAG</p>
   			</div>
-        <input type="tags" id="tags" placeholder="ex: #Family #Summer16 #Food" onChange={this.handleTagsInput.bind(this)}/>
-        <div className="contents-header">
+        <input type="tags" id="tags" placeholder="ex: Family" onChange={this.handleTagsInput.bind(this)}/>
+        <div className="contents-header add-header">
   				<p>NOTES</p>
   			</div>
-        <input type="notes" id="notes" placeholder="Enter Notes" onChange={this.handleNotesInput.bind(this)}/>
-        <div className="contents-header">
-  				<p>INFO</p>
-  			</div>
-        <input type="info" id="info" placeholder={"9500 Gilman Drive"} onChange={this.handleInfoInput.bind(this)}/>
-        <div className="contents-header">
-  				<p>MAP</p>
-  			</div>
-        <div className="map">
-          <img src="../images/map.png" />
+        <div id="notes">
+          <input type="notes" placeholder="Enter Notes" onChange={this.handleNotesInput.bind(this)}/>
         </div>
+        <div className="contents-header add-header">
+  				<p>ADDRESS</p>
+  			</div>
+        <div id="info">
+          <input type="info" placeholder={"9500 Gilman Drive"} onChange={this.handleInfoInput.bind(this)}/>
+        </div>
+		  </div>
+    );
+  }
+
+  render () {
+    return (
+      <div className="Add2">
         <Link to={{
               pathname: '/home',
               query: {
@@ -81,23 +90,14 @@ class Add extends Component {
                 notes: this.state.notes
               }
         }}>
-          <div className="add-button">
+          <div id="add-button">
             <span>Add</span>
           </div>
         </Link>
-		  </div>
-    );
-  }
-
-
-  render () {
-    return (
-      <div className="Add">
         {this.renderContents()}
       </div>
     )
   }
 }
-
 
 export default Add
