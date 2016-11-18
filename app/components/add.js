@@ -58,9 +58,9 @@ class Add extends Component {
           <img src="../images/placeholder.png" />
         </div> */}
         <div className="contents-header add-header">
-  				<p>TAGS</p>
+  				<p>TAG</p>
   			</div>
-        <input type="tags" id="tags" placeholder="ex: #Family #Summer16 #Food" onChange={this.handleTagsInput.bind(this)}/>
+        <input type="tags" id="tags" placeholder="ex: Family" onChange={this.handleTagsInput.bind(this)}/>
         <div className="contents-header add-header">
   				<p>NOTES</p>
   			</div>

@@ -89,7 +89,7 @@ class Location extends Component {
   			</div>
         <input type="location" id="location" value={place.name} onChange={this.handleLocationInput.bind(this)}/>
         <div className="contents-header">
-  				<p>TAGS</p>
+  				<p>TAG</p>
   			</div>
         <input type="tags" id="tags" value={place.tags} onChange={this.handleTagsInput.bind(this)}/>
         <div className="contents-header">

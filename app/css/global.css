@@ -281,7 +281,7 @@ a:-webkit-any-link, a {
   height: 30px;
   width: 30px;
   position: fixed;
-  top: 20px;
+  top: 3vh;
   right: 20px;
   color: #75D6DD; }
 

@@ -81,7 +81,7 @@ class Home extends Component {
         "address": addingJSON.address,
         "distance": 0.8,
         "category": "",
-        "tags": [addingJSON.tags],
+        "tags": ["#"+addingJSON.tags],
         "hours": "M-F 11:00AM - 10:00PM",
         "notes": addingJSON.notes,
         "images": ["../images/add-place.png"]
@@ -91,7 +91,7 @@ class Home extends Component {
       let exists = false;
 
       for(let i in Data.lists){
-        if(addingJSON.tags === Data.lists[i].name){
+        if(("#"+addingJSON.tags) === Data.lists[i].name){
           Data.lists[i].locations.unshift(addingJSON.name);
           exists = true;
           break;
@@ -100,7 +100,7 @@ class Home extends Component {
 
       if(!exists) {
         Data.lists.unshift({
-          "name": addingJSON.tags,
+          "name": "#"+addingJSON.tags,
           "locations": [addingJSON.name]
         })
       }
