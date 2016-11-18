@@ -100,4 +100,4 @@ class Add2 extends Component {
   }
 }
 
-export default Add
+export default Add2

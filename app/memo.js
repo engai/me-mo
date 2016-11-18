@@ -7,6 +7,7 @@ import Nav from './components/nav';
 import Tabs from './components/tabs';
 import Home from './components/home';
 import Add from './components/add';
+import Add2 from './components/add2';
 import Lists from './components/lists';
 import Login from './components/login';
 import Results from './components/results';
@@ -24,7 +25,7 @@ class Memo extends Component {
         <Route path='/' component={Container}>
           <IndexRoute component={Login} />
           <Route path='/home' component={Home} />
-          <Route path='/add' component={Add} />
+          <Route path='/add' component={Add2} />
           <Route path='/lists' component={Lists} />
           <Route path='/results' component={Results} />
           <Route path='/location' component={Location} />
