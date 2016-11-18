@@ -3,7 +3,7 @@
 	top: 9vh;
 	height: 8vh;
 	width: 100%;
-	z-index: 1000;
+	z-index: 999;
 	background: $color-nav;
 	display: flex;
 	align-items: center;
@@ -29,7 +29,7 @@
 
 .contents-home {
 	height: 73vh;
-	top: 16vh;
+	top: 17vh;
 }
 
 .place {
@@ -115,4 +115,23 @@
 		height: 5vh;
 		margin-bottom: 2vh;
 	}
+}
+
+.confirm {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+	background-color: rgba(0,0,0,0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: 2s add forwards ease;
+}
+
+@keyframes add {
+    0%   {opacity: 0;}
+		40%  {opacity: 1;}
+    99%  {opacity: 0; top: 0;}
+		100% {opacity: 0; top:100vh;}
 }

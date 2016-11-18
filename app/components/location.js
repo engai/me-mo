@@ -28,6 +28,19 @@ class Location extends Component {
       info: "",
     };
   }
+  /*
+  componentWillMount() {
+    const script = document.createElement("script");
+    const script2 = document.createElement("script");
+
+    script.src = "../googlemaps.js";
+    script2.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCk9wRSrQCLicmhY_ud6A94OyyrIaScwws&callback=initMap";
+    script2.async = true;
+    script2.defer = true;
+
+    document.body.appendChild(script);
+    document.body.appendChild(script2);
+  }*/
 
   handleLocationInput(event) {
     console.log(event.target.value);
@@ -53,35 +66,6 @@ class Location extends Component {
       info: event.target.value
     });
   }
-  handleDataUpdate(event) {
-    let Data = this.context.Data;
-    event.preventDefault();
-    console.log("hi1");
-    let exists = false;
-
-    Data.local.push({
-      "name": this.state.location,
-      "address": this.state.info,
-      "tags": [this.state.tags],
-      "notes": this.state.notes
-    });
-
-    console.log("hi2");
-    for(var i = 0; i < Data.lists.length; i++){
-      if(Data.lists[i].name === this.state.tags){
-        Data.lists[i].locations.unshift(this.state.location);
-        exists = true;
-      }
-    }
-    console.log("hi3");
-
-    if(!exists) {
-      Data.lists.push({
-        "name": this.state.tags,
-        "locations": [this.state.location]
-      })
-    }
-  }
 
   renderContents() {
     let Data = this.context.Data;
@@ -97,19 +81,13 @@ class Location extends Component {
 
     return (
       <div className="contents">
+        <div className="image-placeholder">
+          <img src={place.images[0]} />
+        </div>
   			<div className="contents-header">
   				<p>LOCATION NAME</p>
   			</div>
         <input type="location" id="location" value={place.name} onChange={this.handleLocationInput.bind(this)}/>
-        <div className="contents-header">
-  				<p>IMAGES</p>
-  			</div>
-        <div id="images">
-          <img src="../images/addphoto.png" />
-          <img src="../images/placeholder.png" />
-          <img src="../images/placeholder.png" />
-          <img src="../images/placeholder.png" />
-        </div>
         <div className="contents-header">
   				<p>TAGS</p>
   			</div>
@@ -117,16 +95,14 @@ class Location extends Component {
         <div className="contents-header">
   				<p>NOTES</p>
   			</div>
-        <input type="notes" id="notes" value={place.notes} onChange={this.handleNotesInput.bind(this)}/>
+        <div id="notes">
+          <input type="notes" value={place.notes} onChange={this.handleNotesInput.bind(this)}/>
+        </div>
         <div className="contents-header">
   				<p>INFO</p>
   			</div>
-        <input type="info" id="info" value={place.address} onChange={this.handleInfoInput.bind(this)}/>
-        <div className="contents-header">
-  				<p>MAP</p>
-  			</div>
-        <div className="map">
-          <img src="../images/map.png" />
+        <div id="info">
+          <input type="info" value={place.address} onChange={this.handleInfoInput.bind(this)}/>
         </div>
 		  </div>
     );

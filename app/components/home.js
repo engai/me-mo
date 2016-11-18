@@ -16,8 +16,16 @@ class Home extends Component {
         <div className="search">
           <form action="#/results?list=%23Summer16&originPage=home">
             <img src="../images/search.png" />
-    				<input type="search" id="search" placeholder="Search" />
+    				<input type="search" id="search" placeholder="Search Nearby Location" />
           </form>
+  		  </div>
+    );
+  }
+
+  renderConfirm() {
+    return (
+        <div className="confirm">
+          <img src="../images/confirm.png" />
   		  </div>
     );
   }
@@ -67,7 +75,8 @@ class Home extends Component {
     let Data = this.context.Data;
     let addingJSON = this.props.location.query;
     if (addingJSON.shouldAdd){
-      Data.local.push({
+
+      Data.local.unshift({
         "name": addingJSON.name,
         "address": addingJSON.address,
         "distance": 0.8,
@@ -75,7 +84,7 @@ class Home extends Component {
         "tags": [addingJSON.tags],
         "hours": "M-F 11:00AM - 10:00PM",
         "notes": addingJSON.notes,
-        "images": ["http://www.titanui.com/wp-content/uploads/2015/04/22/Flat-Gradient-Geometric-Background-Vector.jpg"]
+        "images": ["../images/add-place.png"]
       });
 
       this.props.location.query.shouldAdd = false;
@@ -90,7 +99,7 @@ class Home extends Component {
       }
 
       if(!exists) {
-        Data.lists.push({
+        Data.lists.unshift({
           "name": addingJSON.tags,
           "locations": [addingJSON.name]
         })
@@ -99,9 +108,11 @@ class Home extends Component {
   }
 
   render () {
+    let confirm = this.props.location.query.shouldAdd? this.renderConfirm() : null;
 
     return (
       <div className="Home">
+        { confirm }
         {this.renderSearch()}
         {this.renderContents()}
       </div>

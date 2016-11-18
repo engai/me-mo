@@ -1,7 +1,9 @@
 .Location {
 
-  .contents-header {
-
+  .image-placeholder {
+    img {
+      width: 100vw;
+    }
   }
 
   input {
@@ -9,6 +11,8 @@
     width: 100vw;
     padding-left: 2vw;
     vertical-align: top;
+    color: $color-input;
+    font-size: 14px;
   }
 
   #location, #tags {
@@ -29,10 +33,12 @@
 
   #notes {
     height: 15vh;
+    background: white;
   }
 
   #info {
     height: 10vh;
+    background: white;
   }
 
   .map {
@@ -41,25 +47,15 @@
     }
   }
 
+  #map {
+    width: 100vw;
+    height: 30vh;
+  }
+
   a {
     text-decoration: none;
   }
-
-  .add-button {
-    text-align: center;
-    width: 85vw;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    background-color: $blue;
-    border: 3px solid $blue-border;
-    border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 4vh;
-    margin-top: 3vh;
-    color: white;
-  }
 }
-
 
 #location-back {
 	z-index: 1000;

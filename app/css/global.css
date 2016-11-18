@@ -26,11 +26,12 @@ a:-webkit-any-link, a {
   .contents-header {
     display: flex;
     align-items: center;
-    height: 40px;
-    color: #8E8E93; }
+    height: 20px;
+    padding: 5px 0;
+    color: #000000; }
     .contents-header p {
-      font-size: .7em;
-      margin-bottom: 0;
+      font-size: 12px;
+      margin: 0;
       padding-left: 2vw; }
 
 .tabs {
@@ -48,20 +49,16 @@ a:-webkit-any-link, a {
     width: 100vw;
     height: 100%;
     margin: 0 auto; }
-  .tabs-active .tabs-color {
-    background: #75D6DD; }
-  .tabs-color {
-    position: fixed;
-    bottom: 0px;
-    width: 33vw;
-    height: 7px; }
+  .tabs-active .tabs__buttons-set {
+    border-color: #75D6DD; }
 
 .tabs__buttons-set {
   width: 33vw;
   height: 11vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border-bottom: 7px transparent solid; }
   .tabs__buttons-set p {
     margin-bottom: 0; }
 
@@ -88,7 +85,7 @@ a:-webkit-any-link, a {
   height: 9vh;
   width: 100%;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  z-index: 100;
   background: white; }
   .navigation-content {
     height: 100%;
@@ -112,7 +109,7 @@ a:-webkit-any-link, a {
   top: 9vh;
   height: 8vh;
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   background: #FFFFFF;
   display: flex;
   align-items: center;
@@ -133,7 +130,7 @@ a:-webkit-any-link, a {
 
 .contents-home {
   height: 73vh;
-  top: 16vh; }
+  top: 17vh; }
 
 .place-holder {
   width: 100%;
@@ -198,13 +195,52 @@ a:-webkit-any-link, a {
     height: 5vh;
     margin-bottom: 2vh; }
 
+.confirm {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 2s add forwards ease; }
+
+@keyframes add {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 1; }
+  99% {
+    opacity: 0;
+    top: 0; }
+  100% {
+    opacity: 0;
+    top: 100vh; } }
+.Add .add-header {
+  color: black;
+  font-size: 12px; }
+.Add .add-placeholder img {
+  width: 100vw; }
 .Add input {
   background: white;
   width: 100vw;
   padding-left: 2vw;
-  vertical-align: top; }
+  color: #565963;
+  font-size: 14px; }
+.Add ::-webkit-input-placeholder {
+  font-size: 14px; }
+.Add :-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 14px; }
+.Add ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 14px; }
+.Add :-ms-input-placeholder {
+  font-size: 14px; }
 .Add #location, .Add #tags {
-  height: 5vh; }
+  height: 5vh;
+  background: white; }
 .Add #images {
   width: 200vw;
   height: 100px;
@@ -215,11 +251,17 @@ a:-webkit-any-link, a {
     height: 100px;
     margin-right: 10px; }
 .Add #notes {
-  height: 15vh; }
+  height: 15vh;
+  width: 100%;
+  background: white; }
 .Add #info {
-  height: 10vh; }
+  height: 10vh;
+  background: white; }
 .Add .map img {
   width: 100vw; }
+.Add #map {
+  width: 100vw;
+  height: 30vh; }
 .Add a {
   text-decoration: none; }
 .Add .add-button {
@@ -234,6 +276,14 @@ a:-webkit-any-link, a {
   margin-bottom: 4vh;
   margin-top: 3vh;
   color: white; }
+.Add #add-button {
+  z-index: 1000;
+  height: 30px;
+  width: 30px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #75D6DD; }
 
 .list a {
   text-decoration: none; }
@@ -264,9 +314,12 @@ a:-webkit-any-link, a {
   justify-content: space-between;
   background: white;
   margin-bottom: 2vh; }
-.results-holder img {
+.results-holder {
   width: 20vh;
-  height: 20vh; }
+  height: 20vh;
+  overflow: hidden; }
+  .results-holder img {
+    height: 20vh; }
 .results-info {
   text-decoration: none;
   width: 50vw;
@@ -282,11 +335,15 @@ a:-webkit-any-link, a {
   top: 15px;
   left: 20px; }
 
+.Location .image-placeholder img {
+  width: 100vw; }
 .Location input {
   background: white;
   width: 100vw;
   padding-left: 2vw;
-  vertical-align: top; }
+  vertical-align: top;
+  color: #565963;
+  font-size: 14px; }
 .Location #location, .Location #tags {
   height: 5vh; }
 .Location #images {
@@ -299,25 +356,18 @@ a:-webkit-any-link, a {
     height: 100px;
     margin-right: 10px; }
 .Location #notes {
-  height: 15vh; }
+  height: 15vh;
+  background: white; }
 .Location #info {
-  height: 10vh; }
+  height: 10vh;
+  background: white; }
 .Location .map img {
   width: 100vw; }
+.Location #map {
+  width: 100vw;
+  height: 30vh; }
 .Location a {
   text-decoration: none; }
-.Location .add-button {
-  text-align: center;
-  width: 85vw;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  background-color: #75D6DD;
-  border: 3px solid #71CDD4;
-  border-radius: 10px;
-  margin: 0 auto;
-  margin-bottom: 4vh;
-  margin-top: 3vh;
-  color: white; }
 
 #location-back {
   z-index: 1000;

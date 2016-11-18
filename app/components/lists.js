@@ -24,7 +24,7 @@ class Lists extends Component {
           {list.name}
         </div>
         <div className="list-item-details">
-          {list.locations.length} items • 3 not visited
+          {list.locations.length} items
         </div>
       </div>
     </Link>

@@ -10,6 +10,7 @@ $placeholder: #D8D8D8;
 $color-tabs-active: #75D6DD;
 $blue: #75D6DD;
 $blue-border: #71CDD4;
+$color-input: #565963;
 
 body {
 	margin: 0;
@@ -42,12 +43,13 @@ a:-webkit-any-link, a {
 	&-header {
 		display: flex;
 		align-items: center;
-		height: 40px;
-		color: $color-text-secondary;
+		height: 20px;
+		padding: 5px 0;
+		color: $color-text;
 
 		p {
-			font-size: .7em;
-			margin-bottom: 0;
+			font-size: 12px;
+			margin: 0;
 			padding-left: 2vw;
 		}
 	}
