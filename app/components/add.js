@@ -20,11 +20,8 @@ class Add extends Component {
   }
 
   componentWillMount() {
-    var script = document.createElement( 'script' );
-    script.type = 'text/javascript';
-    script.async = true;
 
-    let hi = `function utmx_section(){}function utmx(){}(function(){var
+    let script1 = `<script>function utmx_section(){}function utmx(){}(function(){var
     k='134638487-0',d=document,l=d.location,c=d.cookie;
     if(l.search.indexOf('utm_expid='+k)>0)return;
     function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
@@ -34,11 +31,13 @@ class Add extends Component {
     '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
     '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
     valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();`
+    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();</script>`
 
-    script.append(hi);
-    script.append("utmx('url','A/B');")
-    document.head.prepend(script);
+    let script2 = `<script>utmx('url','A/B');</script>`
+
+    document.head.append(script1);
+    document.head.append(script2);
+    
   }
 
   handleLocationInput(event) {
