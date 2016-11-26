@@ -42,7 +42,6 @@ class Add extends Component {
 
   renderVariation0() {
     if(cxApi.chooseVariation() == 0){
-      console.log("Rendered 0")
       return(
         <Link to={{
               pathname: '/home',
@@ -64,7 +63,6 @@ class Add extends Component {
 
   renderVariation1() {
     if(cxApi.chooseVariation() == 1){
-      console.log("Rendered 1")
       return(
         <Link to={{
               pathname: '/home',
