@@ -19,27 +19,6 @@ class Add extends Component {
     };
   }
 
-  componentWillMount() {
-
-    let script1 = `<script>function utmx_section(){}function utmx(){}(function(){var
-    k='134638487-0',d=document,l=d.location,c=d.cookie;
-    if(l.search.indexOf('utm_expid='+k)>0)return;
-    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-    indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-    length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-    valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-    '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();</script>`
-
-    let script2 = `<script>utmx('url','A/B');</script>`
-
-    document.head.append(script1);
-    document.head.append(script2);
-    
-  }
-
   handleLocationInput(event) {
     this.setState({
       location: event.target.value
@@ -59,6 +38,50 @@ class Add extends Component {
     this.setState({
       info: event.target.value
     });
+  }
+
+  renderVariation0() {
+    if(cxApi.chooseVariation() == 0){
+      console.log("Rendered 0")
+      return(
+        <Link to={{
+              pathname: '/home',
+              query: {
+                shouldAdd: true,
+                name: this.state.location,
+                address: this.state.info,
+                tags: [this.state.tags],
+                notes: this.state.notes
+              }
+        }}>
+          <div className="add-button">
+            <span>Add</span>
+          </div>
+        </Link>
+      )
+    }
+  }
+
+  renderVariation1() {
+    if(cxApi.chooseVariation() == 1){
+      console.log("Rendered 1")
+      return(
+        <Link to={{
+              pathname: '/home',
+              query: {
+                shouldAdd: true,
+                name: this.state.location,
+                address: this.state.info,
+                tags: [this.state.tags],
+                notes: this.state.notes
+              }
+        }}>
+          <div id="add-button">
+            <span>Add</span>
+          </div>
+        </Link>
+      )
+    }
   }
 
   renderContents() {
@@ -87,20 +110,7 @@ class Add extends Component {
         <div id="info">
           <input type="info" placeholder={"9500 Gilman Drive"} onChange={this.handleInfoInput.bind(this)}/>
         </div>
-        <Link to={{
-              pathname: '/home',
-              query: {
-                shouldAdd: true,
-                name: this.state.location,
-                address: this.state.info,
-                tags: [this.state.tags],
-                notes: this.state.notes
-              }
-        }}>
-          <div className="add-button">
-            <span>Add</span>
-          </div>
-        </Link>
+        {this.renderVariation0()}
 		  </div>
     );
   }
@@ -108,6 +118,7 @@ class Add extends Component {
   render () {
     return (
       <div className="Add2">
+        {this.renderVariation1()}
         {this.renderContents()}
       </div>
     )
