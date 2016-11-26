@@ -47,16 +47,6 @@ class Add2 extends Component {
   				<p>LOCATION NAME</p>
   			</div>
         <input type="location" id="location" placeholder="ex: Cool Taco Place, Nice Bar" onChange={this.handleLocationInput.bind(this)}/>
-        {/*
-        <div className="contents-header add-header">
-  				<p>IMAGES</p>
-  			</div>
-        <div id="images">
-          <img src="../images/addphoto.png" />
-          <img src="../images/placeholder.png" />
-          <img src="../images/placeholder.png" />
-          <img src="../images/placeholder.png" />
-        </div> */}
         <div className="contents-header add-header">
   				<p>TAG</p>
   			</div>

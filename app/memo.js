@@ -32,7 +32,8 @@ class Memo extends Component {
         <Route path='/' component={Container}>
           <IndexRoute component={Login} />
           <Route path='/home' component={Home} />
-          <Route path='/add' component={Add2} />
+          <Route path='/add' component={Add} />
+          <Route path='/add2' component={Add2} />
           <Route path='/lists' component={Lists} />
           <Route path='/results' component={Results} />
           <Route path='/location' component={Location} />
