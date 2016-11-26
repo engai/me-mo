@@ -12,9 +12,8 @@ import Lists from './components/lists';
 import Login from './components/login';
 import Results from './components/results';
 import Location from './components/location';
-import ReactGA from 'react-ga';
 var Data = require('./data/data.json');
-
+import ReactGA from 'react-ga';
 ReactGA.initialize('UA-88060315-1');
 
 class Memo extends Component {

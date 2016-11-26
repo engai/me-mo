@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 var Data = require('../data/data.json');
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-88060315-1');
+
 class Add2 extends Component {
 
   constructor(props, context) {

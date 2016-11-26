@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
 var Data = require('../data/data.json');
 
+import ReactGA from 'react-ga';
+ReactGA.initialize('UA-88060315-1');
+
 class Add extends Component {
 
   constructor(props, context) {
@@ -14,14 +17,6 @@ class Add extends Component {
       notes: "",
       info: "",
     };
-  }
-
-  componentWillMount() {
-    var script = document.createElement( 'script' );
-    script.type = 'text/javascript';
-    script.src = "../ga.js";
-    script.async = true;
-    document.head.append(script);
   }
 
   handleLocationInput(event) {
