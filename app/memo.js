@@ -12,16 +12,23 @@ import Lists from './components/lists';
 import Login from './components/login';
 import Results from './components/results';
 import Location from './components/location';
+import ReactGA from 'react-ga';
 var Data = require('./data/data.json');
+
+ReactGA.initialize('UA-88060315-1');
 
 class Memo extends Component {
   getChildContext() {
     return {Data: Data};
   }
 
+  sendToGoogle() {
+    ReactGA.pageview(window.location.hash);
+  }
+
   render () {
     return (
-      <Router history={hashHistory}>
+      <Router onUpdate={this.sendToGoogle} history={hashHistory}>
         <Route path='/' component={Container}>
           <IndexRoute component={Login} />
           <Route path='/home' component={Home} />

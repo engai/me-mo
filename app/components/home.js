@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Router, Route, Link, IndexLink, IndexRoute, hashHistory, browserHistory } from 'react-router';
+import ReactGA from 'react-ga';
 
 class Home extends Component {
 
@@ -71,10 +72,20 @@ class Home extends Component {
     );
   }
 
+  handleClickAnalytics(){
+    ReactGA.event({
+      category: "Add",
+      action: 'click'
+    });
+    console.log("HEYO I LOGGED");
+  }
+
   componentDidMount () {
     let Data = this.context.Data;
     let addingJSON = this.props.location.query;
     if (addingJSON.shouldAdd){
+
+      this.handleClickAnalytics();
 
       Data.local.unshift({
         "name": addingJSON.name,
