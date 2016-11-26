@@ -19,6 +19,14 @@ class Add extends Component {
     };
   }
 
+  componentWillMount() {
+    var script = document.createElement( 'script' );
+    script.type = 'text/javascript';
+    script.src = "../ga.js";
+    script.async = true;
+    document.head.prepend(script);
+  }
+
   handleLocationInput(event) {
     this.setState({
       location: event.target.value
