@@ -77,7 +77,6 @@ class Home extends Component {
       category: "Add",
       action: 'click'
     });
-    console.log("HEYO I LOGGED");
   }
 
   componentDidMount () {
