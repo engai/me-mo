@@ -15,7 +15,6 @@ import Location from './components/location';
 var Data = require('./data/data.json');
 import ReactGA from 'react-ga';
 ReactGA.initialize('UA-88060315-1');
-ReactGA.ga('create', 'UA-88060315-1', 'auto');
 
 class Memo extends Component {
   getChildContext() {
