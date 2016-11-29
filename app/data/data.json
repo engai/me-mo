@@ -21,7 +21,7 @@
       "images": ["../images/brewery.png"]
     },
     {
-      "name": "Cool Taco Place",
+      "name": "Lolitas Taco Shop",
       "address":"123 Salsa Lane",
       "distance": 0.5,
       "category": "Mexican, Eateries",
@@ -64,13 +64,13 @@
 
   "lists": [
     { "name": "#Bae",
-      "locations": ["Vallartas Express", "Sun God Statue", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+      "locations": ["Vallartas Express", "Sun God Statue", "Lolitas Taco Shop", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     },
     { "name": "#Tacos",
-      "locations": ["Cool Taco Place"]
+      "locations": ["Lolitas Taco Shop", "Vallartas Express"]
     },
     { "name": "#Summer16",
-      "locations": ["Vallartas Express", "Cool Taco Place", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
+      "locations": ["Vallartas Express", "Lolitas Taco Shop", "Sushi Ota", "Karl Strauss Brewery", "Regents Pizza"]
     }
   ]
 }

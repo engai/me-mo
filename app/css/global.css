@@ -254,6 +254,37 @@ a:-webkit-any-link, a {
   margin-top: 3vh;
   color: white; }
 
+.add-button-should-warn {
+  text-align: center;
+  width: 85vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: #75D6DD;
+  border: 3px solid #71CDD4;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  color: white; }
+
+.shouldNotWarn {
+  display: none;
+  z-index: 0;
+  transition: display 1s; }
+
+.shouldWarn {
+  color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  top: 9vh;
+  height: 50px;
+  width: 100vw;
+  background: #F25F6D;
+  transition: display 1s; }
+
 .Add2 .add-header {
   color: black;
   font-size: 12px; }

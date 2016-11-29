@@ -16,7 +16,14 @@ class Add extends Component {
       tags: "",
       notes: "",
       info: "",
+      warning: "shouldNotWarn"
     };
+  }
+
+  handleShouldWarn() {
+    this.setState({
+      warning : "shouldWarn"
+    });
   }
 
   handleLocationInput(event) {
@@ -41,30 +48,44 @@ class Add extends Component {
   }
 
   renderVariation0() {
-    if(cxApi.chooseVariation() == 0){
-      return(
-        <Link to={{
-              pathname: '/home',
-              query: {
-                shouldAdd: true,
-                name: this.state.location,
-                address: this.state.info,
-                tags: [this.state.tags],
-                notes: this.state.notes
-              }
-        }}>
-          <div className="add-button">
-            <span>Add</span>
-          </div>
-        </Link>
+  //  if(cxApi.chooseVariation() == 0){
+      let shouldWarn = false;
+      if(this.state.location == "" || this.state.tags == ""){
+        shouldWarn = true;
+      }
+      else{
+        shouldWarn = false;
+      }
+
+      return(<div>{ shouldWarn ? <div onClick={ (this.handleShouldWarn.bind(this)) } className="add-button-should-warn">
+        <span>Add</span>
+      </div> :
+      <Link to={{
+            pathname: '/home',
+            query: {
+              shouldAdd: true,
+              name: this.state.location,
+              address: this.state.info,
+              tags: [this.state.tags],
+              notes: this.state.notes
+            }
+      }}>
+        <div className="add-button">
+          <span>Add</span>
+        </div>
+      </Link>}</div>
       )
-    }
+  //  }
+  }
+
+  checkAllValues(event) {
+    console.log("Hello");
   }
 
   renderVariation1() {
     if(cxApi.chooseVariation() == 1){
       return(
-        <Link to={{
+        <Link onclick={ () => e.preventDefault() } to={{
               pathname: '/home',
               query: {
                 shouldAdd: true,
@@ -116,7 +137,11 @@ class Add extends Component {
   render () {
     return (
       <div className="Add2">
-        {this.renderVariation1()}
+      //  {this.renderVariation1()}
+
+        <div className={this.state.warning}>
+          oops, you didn't include a name or tag!
+        </div>
         {this.renderContents()}
       </div>
     )

@@ -28,19 +28,6 @@ class Location extends Component {
       info: "",
     };
   }
-  /*
-  componentWillMount() {
-    const script = document.createElement("script");
-    const script2 = document.createElement("script");
-
-    script.src = "../googlemaps.js";
-    script2.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCk9wRSrQCLicmhY_ud6A94OyyrIaScwws&callback=initMap";
-    script2.async = true;
-    script2.defer = true;
-
-    document.body.appendChild(script);
-    document.body.appendChild(script2);
-  }*/
 
   handleLocationInput(event) {
     console.log(event.target.value);
@@ -99,7 +86,7 @@ class Location extends Component {
           <input type="notes" value={place.notes} onChange={this.handleNotesInput.bind(this)}/>
         </div>
         <div className="contents-header">
-  				<p>INFO</p>
+  				<p>ADDRESS</p>
   			</div>
         <div id="info">
           <input type="info" value={place.address} onChange={this.handleInfoInput.bind(this)}/>

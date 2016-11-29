@@ -59,3 +59,37 @@
     color: white;
   }
 }
+
+.add-button-should-warn {
+  text-align: center;
+  width: 85vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  background-color: $blue;
+  border: 3px solid $blue-border;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 4vh;
+  margin-top: 3vh;
+  color: white;
+}
+
+.shouldNotWarn {
+  display: none;
+  z-index: 0;
+  transition: display 1s;
+}
+
+.shouldWarn {
+  color: white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  top: 9vh;
+  height: 50px;
+  width: 100vw;
+  background: #F25F6D;
+  transition: display 1s;
+}
